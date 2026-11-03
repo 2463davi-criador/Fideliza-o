@@ -7,7 +7,7 @@
     "directory": "./public",
     "binding": "ASSETS",
     "run_worker_first": true
-  },
+  }
 "database_id": "eb310289-4e6b-452b-8615-539202ced79b"
       "binding": "DB",
       "database_name": "beeclub-data",
