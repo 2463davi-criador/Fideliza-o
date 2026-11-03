@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: beeclub-loyalty
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_PATH
+        value: /var/data/beeclub.sqlite3
+    disk:
+      name: beeclub-data
+      mountPath: /var/data
+      sizeGB: 1
