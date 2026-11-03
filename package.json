@@ -1,0 +1,15 @@
+{
+  "name": "beeclub-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create beeclub-data",
+    "db:init:local": "wrangler d1 execute beeclub-data --local --file=schema.sql",
+    "db:init:remote": "wrangler d1 execute beeclub-data --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
